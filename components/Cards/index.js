@@ -22,13 +22,11 @@ axios
 
 .then((allArts) => {
 
-let bla = allArts.data.articles;
-    console.log(bla);
 
 let ble = [];
 
-for (let i = 0; i < Object.keys(bla).length; i++){
-    ble.push(Object.values(bla)[i]);
+for (let i = 0; i < Object.keys(allArts.data.articles).length; i++){
+    ble.push(Object.values(allArts.data.articles)[i]);
 };
 
 
