@@ -7,3 +7,23 @@
 //
 //  The tab component should look like this:
 //    <div class="tab">topic here</div>
+axios 
+.get('https://lambda-times-backend.herokuapp.com/topics')
+.then((response) => {
+response.data.topics.forEach((topic) => {
+const topicDiv = document.querySelector('.topics');
+
+let bla = document.createElement('div');
+bla.classList.add('tab');
+bla.textContent = topic;
+topicDiv.appendChild(bla);
+    });
+
+  })
+  .catch((err) =>{
+    console.log(err);
+  })
+  
+
+
+
