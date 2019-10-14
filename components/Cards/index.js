@@ -22,11 +22,10 @@ axios
 
 .then((allArts) => {
 
-
-let ble = [];
+let article = [];
 
 for (let i = 0; i < Object.keys(allArts.data.articles).length; i++){
-    ble.push(Object.values(allArts.data.articles)[i]);
+    article.push(Object.values(allArts.data.articles)[i]);
 };
 
 
@@ -63,19 +62,20 @@ cardsContainer.appendChild(card);
 return card;
 };
 
-ble[0].forEach((data) => {
+
+article[0].forEach((data) => {
 cardCreator(data.headline, data.authorPhoto, data.authorName)
 }) ;
-ble[1].forEach((data) => {
+article[1].forEach((data) => {
 cardCreator(data.headline, data.authorPhoto, data.authorName)
 }) ;
-ble[2].forEach((data) => {
+article[2].forEach((data) => {
 cardCreator(data.headline, data.authorPhoto, data.authorName)
 }) ;
-ble[3].forEach((data) => {
+article[3].forEach((data) => {
     cardCreator(data.headline, data.authorPhoto, data.authorName)
     }) ;
-ble[4].forEach((data) => {
+article[4].forEach((data) => {
         cardCreator(data.headline, data.authorPhoto, data.authorName)
         }) ;
 
