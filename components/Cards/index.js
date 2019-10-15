@@ -62,22 +62,15 @@ cardsContainer.appendChild(card);
 return card;
 };
 
-
-article[0].forEach((data) => {
-cardCreator(data.headline, data.authorPhoto, data.authorName)
-}) ;
-article[1].forEach((data) => {
-cardCreator(data.headline, data.authorPhoto, data.authorName)
-}) ;
-article[2].forEach((data) => {
-cardCreator(data.headline, data.authorPhoto, data.authorName)
-}) ;
-article[3].forEach((data) => {
-    cardCreator(data.headline, data.authorPhoto, data.authorName)
-    }) ;
-article[4].forEach((data) => {
-        cardCreator(data.headline, data.authorPhoto, data.authorName)
-        }) ;
+//FUNCTION THAT PUSHES THE OBJECTS INTO COMPONENT
+article.forEach((data) => {
+    
+    data.forEach((object) => {
+        cardCreator(object.headline, object.authorPhoto, object.authorName)
+    });
+    
+    });
+    
 
 })
 .catch((err) =>{
